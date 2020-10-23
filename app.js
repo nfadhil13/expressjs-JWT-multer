@@ -13,6 +13,7 @@ const { v4: uuidv4 } = require("uuid");
 
 const Post = require("./model/post");
 const User = require("./model/user");
+const { truncate } = require("./model/post");
 
 const app = express();
 
@@ -75,21 +76,10 @@ app.use((error, req, res, next) => {
   });
 });
 
-User.hasMany(Post, {
-  constraints: true,
-  onDelete: "CASCADE",
-  foreignKey : {
-      allowNull : false
-  }
-});
-
-Post.belongsTo(User , {
-    constraints: true
-})
 
 const init = async () => {
   try {
-    await sequelize.sync();
+    await sequelize.sync({force : true});
     app.listen(process.env.PORT || 8182);
   } catch (err) {
     console.log(err);
