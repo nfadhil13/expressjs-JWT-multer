@@ -1,8 +1,8 @@
 module.exports = {
-    DB : "db",
-    USER : "db",
-    PASSWORD : "m831gmxwfkonkc99",
+    DB : "db79sjcisjfqfo",
+    USER : "logjhsmcmtmmkd",
+    PASSWORD : "8ae3fd8753c938c43b482c222ff76005fe8542ff10439072b3db36ead0ff4c5f",
     dialect : "postgres",
-    host : "app-6bdfc42b-920d-4283-ad37-a27c2faefd4d-do-user-8192489-0.a.db.ondigitalocean.com",
-    port : 25060
+    host : "-54-82-208-124.compute-1.amazonaws.com",
+    port : 5432
 }
