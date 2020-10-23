@@ -90,7 +90,7 @@ Post.belongsTo(User , {
 const init = async () => {
   try {
     await sequelize.sync();
-    app.listen(8181);
+    app.listen(process.env.PORT || 3000);
   } catch (err) {
     console.log(err);
   }
