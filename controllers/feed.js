@@ -37,7 +37,7 @@ exports.createPost = async (req, res, next) => {
       console.log("no file");
       throw error;
     }
-    const imageUrl = req.file.path.replace(/\\/gi, "/");
+    const imageUrl = req.file.path
     const title = req.body.title;
     const content = req.body.content;
     console.log(title);
