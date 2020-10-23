@@ -1,12 +1,10 @@
 const { Sequelize } = require("sequelize");
 
-const config = require("./dbconfig.js")
-
-
+const config = require("./dbconfig");
 
 const sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD, {
   dialect: config.dialect,
-  host: config.host,
+  host: config.HOST,
   port: config.port,
   dialectOptions: {
     ssl: {
@@ -15,8 +13,5 @@ const sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD, {
     },
   },
 });
-
-
-
 
 module.exports = sequelize;
